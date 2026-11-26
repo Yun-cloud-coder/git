@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1d130d" />
+  <title>人间烟火 · 摊主的一天 | 人间有味</title>
+  <meta name="description" content="天还没亮，街口先有了热气。跟着三户街坊，走进巷口早点、面馆、菜场与一条小巷的一天。" />
+  <link rel="preload" as="image" href="assets/yanhuo/street-bg.jpg" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/yanhuo.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+</head>
+<body class="yh-page is-intro">
+
+  <!-- 背景：与入口长街同一场景的清晨 -->
+  <div class="yh-bg" aria-hidden="true">
+    <div class="yh-bg__img"></div>
+    <div class="yh-bg__wash"></div>
+    <div class="yh-bg__glow yh-bg__glow--title"></div>
+    <div class="yh-bg__glow yh-bg__glow--right"></div>
+    <div class="yh-bg__vignette"></div>
+  </div>
+  <div class="yh-grain" aria-hidden="true"></div>
+  <div class="yh-light" aria-hidden="true"></div>
+
+  <header class="site-head site-head--street yh-head" id="siteHead">
+    <div class="yh-head__left">
+      <a class="yh-back" href="index.html?from=zaodian" aria-label="回到长街">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        <span>回到长街</span>
+      </a>
+      <i class="yh-head__div" aria-hidden="true"></i>
+      <a class="brand" href="index.html" aria-label="人间有味 首页">
+        <span class="brand-text">
+          <span class="brand-name">人间有味</span>
+          <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="yh-head__chapter" aria-hidden="true">
+      <span>第一章</span>
+      <i></i>
+      <b>人间烟火</b>
+      <em>摊主的一天</em>
+    </div>
+
+    <div class="yh-head__right">
+      <button class="yh-sound" id="soundToggle" type="button" aria-pressed="true" aria-label="关闭声音">
+        <svg class="yh-sound__on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+        <svg class="yh-sound__off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+        <span>声音</span>
+      </button>
+      <nav class="main-nav" aria-label="板块导航">
+        <a href="yanhuo.html" class="is-active" aria-current="page">人间烟火</a>
+        <a href="shuitu.html">水土</a>
+        <a href="shijie.html">时节</a>
+        <a href="jiangxin.html">匠心</a>
+        <a href="jiyi.html">记忆</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+        <i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+      <a class="menu-back" href="index.html?from=zaodian">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        回到长街
+      </a>
+      <div class="menu-list">
+      <a class="menu-link is-active" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <main class="yh-shell" id="yhShell">
+
+    <!-- 开场：人间烟火 -->
+    <section class="yh-hero" id="yhHero" aria-labelledby="yhTitle">
+      <div class="yh-hero__inner">
+        <p class="yh-eyebrow">
+          <span>第 一 章</span>
+          <i aria-hidden="true"></i>
+          <span>THE PEOPLE</span>
+        </p>
+        <div class="yh-hero__sub" id="yhHeroSub">
+          <p>一屉一屉地蒸，一碗一碗地盛。</p>
+          <p>天还没亮，街口先有了热气。</p>
+          <p>这是三户街坊的一天。</p>
+        </div>
+        <div class="yh-hero__hint">
+          <span>即将入席</span>
+          <i class="yh-introbar" aria-hidden="true"><b></b></i>
+          <button class="yh-skip" id="yhSkip" type="button">跳过片头</button>
+        </div>
+      </div>
+
+      <p class="yh-hero__side" aria-hidden="true">天 未 亮 · 先 点 火 · 人 间 有 味</p>
+      <p class="yh-hero__foot yh-hero__foot--left">04:30 <b>·</b> 街口早点铺</p>
+    </section>
+
+    <!-- 正片：左侧标题 + 右侧影像 + 底部三张人物便签 -->
+    <section class="yh-stage" id="yhStage" aria-hidden="true" aria-label="人间烟火 · 摊主的一天">
+      <div class="yh-stage__top">
+        <div class="yh-copy" id="yhCopy">
+          <p class="yh-kicker"><span>摊主的一天</span><i aria-hidden="true"></i><time>04:30 — 09:00</time></p>
+          <p class="yh-lead">天还没亮，街口先醒了一盏灯。第一屉包子上了案，白汽顺着竹屉缝往上走，整条巷子便醒了。</p>
+          <blockquote class="yh-quote">“面要醒，人也要等。<br />急不得。”</blockquote>
+          <p class="yh-sign">—— 巷口早点</p>
+          <a class="yh-scrollcue" href="#yhPeople">
+            看三户街坊
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+
+        <figure class="yh-film" id="yhFilm">
+          <figcaption class="yh-film__head">
+            <span class="yh-film__tag"><i aria-hidden="true"></i>影像</span>
+            <span class="yh-film__title">一餐一饭 · 皆是人间</span>
+            <span class="yh-film__dur">01:08</span>
+          </figcaption>
+
+          <div class="yh-film__frame" id="yhFilmFrame">
+            <span class="yh-film__corner yh-film__corner--tl" aria-hidden="true"></span>
+            <span class="yh-film__corner yh-film__corner--tr" aria-hidden="true"></span>
+            <span class="yh-film__corner yh-film__corner--bl" aria-hidden="true"></span>
+            <span class="yh-film__corner yh-film__corner--br" aria-hidden="true"></span>
+            <div class="yh-film__mat">
+              <video id="yhVideo" src="assets/yanhuo/renjian-yanhuo.mp4" poster="assets/yanhuo/poster.jpg" playsinline preload="auto" loop aria-label="街头早点摊与一日三餐的影像片段"></video>
+              <div class="yh-film__grade" aria-hidden="true"></div>
+
+              <button class="yh-bigplay" id="yhBigPlay" type="button" aria-label="播放影像">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.5 5.6v12.8c0 .8.9 1.3 1.6.9l9.4-6.4c.6-.4.6-1.3 0-1.7L10.1 4.7c-.7-.4-1.6.1-1.6.9z"/></svg>
+              </button>
+
+              <p class="yh-soundhint" id="yhSoundHint">
+                <i aria-hidden="true"></i>声音被浏览器拦住 · 点一下画面
+              </p>
+
+              <div class="yh-controls" id="yhControls">
+                <button class="yh-ctrl yh-ctrl--play" id="yhPlayBtn" type="button" aria-label="播放或暂停">
+                  <svg class="yh-ic-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.5 5.6v12.8c0 .8.9 1.3 1.6.9l9.4-6.4c.6-.4.6-1.3 0-1.7L10.1 4.7c-.7-.4-1.6.1-1.6.9z"/></svg>
+                  <svg class="yh-ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5" width="3.4" height="14" rx=".6"/><rect x="13.6" y="5" width="3.4" height="14" rx=".6"/></svg>
+                </button>
+                <div class="yh-track" id="yhTrack" role="slider" tabindex="0" aria-label="影片进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <i class="yh-track__base" aria-hidden="true"></i>
+                  <i class="yh-track__fill" id="yhFill" aria-hidden="true"></i>
+                  <b class="yh-track__dot" id="yhDot" aria-hidden="true"></b>
+                </div>
+                <span class="yh-time" id="yhTime">00:00 / 01:08</span>
+                <button class="yh-ctrl" id="yhMuteBtn" type="button" aria-label="开关声音">
+                  <svg class="yh-ic-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                  <svg class="yh-ic-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+                </button>
+                <button class="yh-ctrl" id="yhFullBtn" type="button" aria-label="全屏观看">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+                </button>
+              </div>
+
+              <span class="yh-film__seal" aria-hidden="true">烟火</span>
+            </div>
+          </div>
+
+          <figcaption class="yh-film__foot">
+            <em>油锅一起，街就醒了。</em>
+          </figcaption>
+        </figure>
+      </div>
+
+      <section class="yh-people" id="yhPeople" aria-labelledby="yhPeopleTitle">
+        <div class="yh-people__head">
+          <p id="yhPeopleTitle">三户街坊 · 三炉烟火</p>
+        </div>
+
+        <div class="yh-people__row">
+          <button class="yh-note" type="button" data-feature="aixin" style="--tilt:-.65deg" aria-haspopup="dialog">
+            <span class="yh-note__tape" aria-hidden="true"></span>
+            <span class="yh-note__no" aria-hidden="true">壹</span>
+            <span class="yh-note__text">
+              <span class="yh-note__name">万佐成 · 熊庚香</span>
+              <span class="yh-note__role">爱心厨房 · 坚守二十载</span>
+              <span class="yh-note__quote">“我们不是英雄，只是一对会炒菜的老夫妻。”</span>
+            </span>
+            <span class="yh-note__pic"><img src="assets/yanhuo/aixin/card.jpg" alt="万佐成与熊庚香夫妇" loading="lazy" /></span>
+            <span class="yh-note__more">展开 <i aria-hidden="true">↗</i></span>
+          </button>
+
+          <button class="yh-note" type="button" data-feature="zongzi" style="--tilt:.45deg" aria-haspopup="dialog">
+            <span class="yh-note__tape" aria-hidden="true"></span>
+            <span class="yh-note__no" aria-hidden="true">贰</span>
+            <span class="yh-note__text">
+              <span class="yh-note__name">陈少洪</span>
+              <span class="yh-note__role">乐山粽子 · 推车三十余年</span>
+              <span class="yh-note__quote">“我没有多大本事，只想让大伙都能吃上一口热粽子。”</span>
+            </span>
+            <span class="yh-note__pic"><img src="assets/yanhuo/zongzi/card.jpg" alt="陈少洪在三轮车粽子摊前" loading="lazy" /></span>
+            <span class="yh-note__more">展开 <i aria-hidden="true">↗</i></span>
+          </button>
+
+          <button class="yh-note" type="button" data-feature="wang" style="--tilt:-.35deg" aria-haspopup="dialog">
+            <span class="yh-note__tape" aria-hidden="true"></span>
+            <span class="yh-note__no" aria-hidden="true">叁</span>
+            <span class="yh-note__text">
+              <span class="yh-note__name">王永法</span>
+              <span class="yh-note__role">安阳捋面 · 第六代传承人</span>
+              <span class="yh-note__quote">“我算不上什么大师，只想把这门老手艺好好传下去。”</span>
+            </span>
+            <span class="yh-note__pic"><img src="assets/yanhuo/wangyongfa/card.jpg" alt="案板上切好的安阳捋面" loading="lazy" /></span>
+            <span class="yh-note__more">展开 <i aria-hidden="true">↗</i></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="return-street return-street--night return-street--compact" aria-labelledby="yhReturnTitle">
+        <span class="return-street__seal" aria-hidden="true">回</span>
+        <p class="return-street__kicker">这一炉火，看到这里</p>
+        <h2 id="yhReturnTitle">回到长街，<em>继续往前</em></h2>
+        <p class="return-street__line">从「老张早点」门口再往里走，下一家，是三省食铺。</p>
+        <a class="return-street__btn" href="index.html?from=zaodian">
+          回到长街
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </section>
+    </section>
+
+    <!-- 会移动到左上方的主标题 -->
+    <div class="yh-title-wrap" id="yhTitleWrap">
+      <h1 class="yh-title" id="yhTitle" aria-label="人间烟火">
+        <span class="yh-title__char" style="--i:0">人</span>
+        <span class="yh-title__char" style="--i:1">间</span>
+        <span class="yh-title__char" style="--i:2">烟</span>
+        <span class="yh-title__char" style="--i:3">火</span>
+      </h1>
+      <span class="yh-title__seal" aria-hidden="true">壹</span>
+      <svg class="yh-title__brush" viewBox="0 0 760 54" fill="none" aria-hidden="true">
+        <path d="M20 38C142 16 251 36 360 28C478 19 596 34 740 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M97 46C224 33 354 46 511 36C579 32 638 35 690 31" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".44" />
+      </svg>
+    </div>
+  </main>
+
+  <!-- 人物便签放大后的故事 -->
+  <div class="yh-story" id="yhStory" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="yhStoryName">
+    <div class="yh-story__backdrop" data-story-close></div>
+    <article class="yh-story__panel" id="yhStoryPanel">
+      <button class="yh-story__close" id="yhStoryClose" type="button" aria-label="关闭人物故事" data-story-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+
+      <div class="yh-story__media">
+        <img id="yhStoryImg" src="assets/images/scenes/buns.jpg" alt="" />
+        <span class="yh-story__shade" aria-hidden="true"></span>
+        <span class="yh-story__side" aria-hidden="true">人 间 烟 火 · 人 物 志</span>
+        <span class="yh-story__seal" id="yhStorySeal" aria-hidden="true">早</span>
+        <p class="yh-story__caption" id="yhStoryCaption">凌晨三点二十，第一场面。</p>
+      </div>
+
+      <div class="yh-story__copy">
+        <p class="yh-story__kicker" id="yhStoryKicker">摊主的一天 / 04:30</p>
+        <h2 id="yhStoryName">老张</h2>
+        <p class="yh-story__role" id="yhStoryRole">巷口早点 · 出摊第 26 年</p>
+        <dl class="yh-story__facts" id="yhStoryFacts"></dl>
+        <blockquote id="yhStoryQuote">“面要醒，人也要等。急不得。”</blockquote>
+        <div class="yh-story__text" id="yhStoryText"></div>
+        <p class="yh-story__sign" id="yhStorySign">—— 老张，写在面案边上</p>
+        <button class="yh-story__back" type="button" data-story-close>回到街上 <span aria-hidden="true">→</span></button>
+      </div>
+    </article>
+  </div>
+
+  <!-- 三炉全屏故事：爱心厨房 / 乐山粽子 / 安阳捋面 -->
+  <div class="yh-feature" id="yhFeature" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="yhFeatureName">
+    <div class="yh-feature__bg" aria-hidden="true">
+      <img id="yhFeatureBg" src="assets/yanhuo/aixin/bg.jpg" alt="" decoding="async" />
+    </div>
+    <div class="yh-feature__grain" aria-hidden="true"></div>
+
+    <header class="yh-feature__bar">
+      <p class="yh-feature__brand">
+        <span>人间烟火</span>
+        <i aria-hidden="true"></i>
+        <em>人物志</em>
+      </p>
+      <p class="yh-feature__where" id="yhFeatureWhere">第一炉 <span>·</span> 爱心厨房</p>
+      <button class="yh-feature__close" id="yhFeatureClose" type="button" aria-label="关闭故事，回到街上">
+        <span>回到街上</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </header>
+
+    <div class="yh-feature__body">
+      <section class="yh-feature__copy">
+        <p class="yh-feature__kicker">
+          <span id="yhFeatureKicker">第一炉</span><i aria-hidden="true"></i><time id="yhFeatureTime">肿瘤医院旁 · 一条小巷</time>
+        </p>
+
+        <div class="yh-feature__namerow">
+          <h2 class="yh-feature__name" id="yhFeatureName">万佐成<i>·</i>熊庚香</h2>
+          <span class="yh-feature__seal" id="yhFeatureSeal" aria-hidden="true">炉</span>
+        </div>
+
+        <p class="yh-feature__role" id="yhFeatureRole">爱心厨房 <span>·</span> 一对会炒菜的老夫妻</p>
+
+        <blockquote class="yh-feature__quote" id="yhFeatureQuote">
+          “我们不是英雄，<br />我们只是一对会炒菜的老夫妻。”
+        </blockquote>
+
+        <div class="yh-feature__text" id="yhFeatureText">
+          <p>万佐成、熊庚香夫妇坚守二十载，在肿瘤医院旁的小巷里撑起一间“抗癌厨房”。早年他们只是普通油条摊主，只因一位求医家长借火做饭的请求，便把自家炉灶借给更多病患家庭。</p>
+          <p>从此，狭窄巷道间炉火长明，锅铲声、饭菜香、说话声交织成人间烟火。</p>
+        </div>
+
+        <dl class="yh-feature__facts" id="yhFeatureFacts">
+          <div><dt>二十载</dt><dd>炉火不熄</dd></div>
+          <div><dt>一元</dt><dd>一顿热饭</dd></div>
+          <div><dt>百家炉</dt><dd>共守烟火</dd></div>
+        </dl>
+
+        <p class="yh-feature__sign" id="yhFeatureSign">—— 万家厨房百家炉，共守别样烟火</p>
+      </section>
+
+      <section class="yh-feature__side" id="yhFeatureSide" aria-label="爱心厨房的影像与手迹">
+        <div class="yh-feature__sidehead">
+          <p id="yhFeatureSideTitle">影像与手迹</p>
+          <span id="yhFeatureFrames">07 帧 · 现场记录</span>
+        </div>
+
+        <div class="yh-reel" id="yhReel" data-count="7">
+          <div class="yh-reel__perf" aria-hidden="true"></div>
+          <div class="yh-reel__viewport">
+            <div class="yh-reel__track" id="yhReelTrack"></div>
+            <div class="yh-reel__gate" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+          </div>
+          <div class="yh-reel__perf" aria-hidden="true"></div>
+        </div>
+
+        <div class="yh-reel__foot">
+          <button class="yh-reel__toggle" id="yhReelToggle" type="button" aria-pressed="false">
+            <svg class="yh-reel__pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5" width="3.2" height="14" rx=".6"/><rect x="13.8" y="5" width="3.2" height="14" rx=".6"/></svg>
+            <svg class="yh-reel__play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.5 5.6v12.8c0 .8.9 1.3 1.6.9l9.4-6.4c.6-.4.6-1.3 0-1.7L10.1 4.7c-.7-.4-1.6.1-1.6.9z"/></svg>
+            <span id="yhReelLabel">暂停流转</span>
+          </button>
+        </div>
+
+        <div class="yh-feature__verse">
+          <p id="yhFeatureVerse">微弱的灯，照亮寒夜的路人；<br />火红的灶，氤氲亲情的味道。</p>
+          <span id="yhFeatureVerseSub">这陋巷中的厨房，烹煮焦虑与苦涩，<br />端出温暖和芬芳。</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="yh-toast" id="yhToast" role="status" aria-live="polite"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/yanhuo.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>
