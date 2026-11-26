@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0d0a06" />
+  <title>街尾邮局 · 收件箱 | 人间有味</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-page">
+
+  <div class="admin-texture" aria-hidden="true"></div>
+  <div class="admin-vignette" aria-hidden="true"></div>
+
+  <main class="admin-shell">
+
+    <!-- ================= 登录 ================= -->
+    <section class="login-view" id="loginView" aria-labelledby="loginTitle">
+      <div class="login-copy">
+        <p class="login-eyebrow"><span>POSTE RESTANTE</span><i></i><span>街 尾 · 本 机</span></p>
+        <h1 class="login-title" id="loginTitle"><span>街尾</span><em>邮局</em></h1>
+        <p class="login-lede">长街走到底，灯还亮着的那一间。<br />写给以后的话，都在这里落一落。</p>
+        <div class="login-rule"><span></span><b>人</b><span></span></div>
+        <p class="login-quiet">只在 127.0.0.1 上收信 · 不上传到任何外部服务</p>
+
+        <div class="login-postmark" aria-hidden="true">
+          <span>人间有味</span>
+          <b>街尾</b>
+          <em>POST · 05</em>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <span class="login-card__tape" aria-hidden="true"></span>
+        <span class="login-card__stamp" aria-hidden="true"><b>收</b><i>信</i></span>
+        <p class="login-card__kicker">LOCAL POST OFFICE</p>
+        <h2>取出今天的信</h2>
+        <p class="login-card__lede">输入本机邮差口令，打开街尾的收件箱。</p>
+
+        <form class="login-form" id="loginForm" autocomplete="off">
+          <label for="adminCode">本机邮差口令</label>
+          <input id="adminCode" name="code" type="password" inputmode="text" spellcheck="false" autocomplete="current-password" placeholder="例如 AB3D-7K9M" required />
+          <button class="login-submit" id="loginBtn" type="submit">
+            <span>开门</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="login-error" id="loginError" role="alert"></p>
+        </form>
+
+        <p class="login-hint">口令在启动终端里打印，也写在 <code>data/admin-code.txt</code>。忘了就删掉这个文件，重启服务会生成新的。</p>
+      </div>
+    </section>
+
+    <!-- ================= 收件箱 ================= -->
+    <section class="inbox-view" id="inboxView" aria-labelledby="inboxTitle" hidden>
+      <header class="inbox-top">
+        <a class="inbox-brand" href="/" aria-label="回到长街">
+          <span class="inbox-brand__seal">味</span>
+          <span><b>街尾邮局</b><em>人间有味 · LOCAL POST</em></span>
+        </a>
+
+        <div class="inbox-stats" aria-label="收件箱统计">
+          <div><b id="statTotal">0</b><span>封信</span></div>
+          <div><b id="statUnread">0</b><span>未读</span></div>
+          <div><b id="statStarred">0</b><span>星标</span></div>
+        </div>
+
+        <div class="inbox-tools">
+          <button class="icon-btn" id="refreshBtn" type="button" aria-label="刷新收件箱" title="刷新">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/></svg>
+          </button>
+          <button class="text-btn" id="logoutBtn" type="button">关门</button>
+        </div>
+      </header>
+
+      <div class="inbox-title-row">
+        <div>
+          <p class="inbox-eyebrow">THE LATE POST · 只在本机</p>
+          <h1 id="inboxTitle">街尾收件箱</h1>
+        </div>
+        <p class="inbox-sub">每一张都是别人认真写下的一味。<br />读完，可以标星，也可以轻轻撤下。</p>
+      </div>
+
+      <div class="inbox-toolbar">
+        <div class="filter-row" id="filterRow" role="tablist" aria-label="筛选明信片">
+          <button class="filter-btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">全部 <b>0</b></button>
+          <button class="filter-btn" type="button" data-filter="unread" role="tab" aria-selected="false">未读 <b>0</b></button>
+          <button class="filter-btn" type="button" data-filter="starred" role="tab" aria-selected="false">星标 <b>0</b></button>
+        </div>
+        <label class="search-box" for="searchInput">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="searchInput" type="search" placeholder="找一味菜、一句话" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="card-grid" id="cardGrid" aria-live="polite"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span class="empty-state__seal" aria-hidden="true">封</span>
+        <h2>这里还空着</h2>
+        <p id="emptyText">还没有人往街尾寄信。回到长街，写一张吧。</p>
+        <a class="empty-state__link" href="/jiyi.html">去写一张明信片 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <footer class="inbox-foot">
+        <span>人间有味 · 街尾邮局</span>
+        <span>明信片只存在这台电脑的 data/ 里</span>
+        <span id="loadStamp">—</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ================= 明信片详情 ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="lightbox__scrim" id="lightboxScrim"></div>
+    <div class="lightbox__panel" role="document">
+      <button class="lightbox__close" id="lightboxClose" type="button" aria-label="关掉这封信">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="lightbox__visual">
+        <img id="lightboxImage" alt="" />
+        <span class="lightbox__postmark" aria-hidden="true"><b>街尾</b><em>POST</em></span>
+      </div>
+
+      <div class="lightbox__note">
+        <p class="lightbox__date" id="lightboxDate"></p>
+        <p class="lightbox__tag" id="lightboxTag"></p>
+        <h2 id="lightboxTitle"></h2>
+        <div class="lightbox__text" id="lightboxText"></div>
+        <p class="lightbox__meta" id="lightboxMeta"></p>
+
+        <div class="lightbox__actions">
+          <button class="note-btn" id="lightboxRead" type="button">标为未读</button>
+          <button class="note-btn" id="lightboxStar" type="button">加星标</button>
+          <button class="note-btn note-btn--danger" id="lightboxDelete" type="button">撤下这张</button>
+        </div>
+
+        <div class="lightbox__nav">
+          <button class="nav-btn" id="lightboxPrev" type="button" aria-label="上一封">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            上一封
+          </button>
+          <span id="lightboxIndex">1 / 1</span>
+          <button class="nav-btn" id="lightboxNext" type="button" aria-label="下一封">
+            下一封
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

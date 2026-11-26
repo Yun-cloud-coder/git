@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b161a" />
+  <title>时节之味 · 春生夏长 | 人间有味</title>
+  <meta name="description" content="跟着节气吃饭，是中国人最日常的浪漫。春笋、荷叶、新米与藕汤，四个季节，四桌菜。" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/shijie.css" />
+  <link rel="stylesheet" href="css/passage-gallery.css" />
+  <link rel="stylesheet" href="css/flex-carousel.css" />
+  <link rel="stylesheet" href="css/circle-gallery.css" />
+  <link rel="stylesheet" href="css/infinite-spiral.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+</head>
+<body class="shijie-page">
+
+  <header class="site-head site-head--street" id="siteHead">
+    <a class="head-back" href="index.html?from=caishi" aria-label="回到长街">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span>回到长街</span>
+    </a>
+        <a class="brand" href="index.html" aria-label="人间有味 首页">
+      <span class="brand-text">
+        <span class="brand-name">人间有味</span>
+        <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="板块导航">
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html" class="is-active" aria-current="page">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+      <i></i><i></i>
+    </button>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+      <a class="menu-back" href="index.html?from=caishi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        回到长街
+      </a>
+      <div class="menu-list">
+      <a class="menu-link" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link is-active" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <main class="season-main">
+    <section class="scene-season" id="season" aria-labelledby="seasonPageTitle">
+      <div class="season-head">
+        <p class="season-eyebrow">
+          <span>第三章 · 时节之味</span>
+          <i></i>
+          <span>FOUR SEASONS · SOLAR TERMS</span>
+        </p>
+        <h1 class="season-title" id="seasonPageTitle">一箸知时节，<em>三餐里有四季</em></h1>
+        <p class="season-lead">春笋破土，荷叶铺水，稻穗低头，汤锅起雾。四季不说话，把答案都藏进食材里。</p>
+      </div>
+
+      <div class="season-row">
+        <button class="season-panel season-spring is-video" type="button" data-season="spring" aria-label="打开春日光廊，走进照片隧道">
+          <svg class="season-art" viewBox="0 0 420 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="spSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f4b3d"/><stop offset=".55" stop-color="#54705a"/><stop offset="1" stop-color="#9aab84"/></linearGradient>
+            </defs>
+            <rect width="420" height="900" fill="url(#spSky)"/>
+            <circle cx="310" cy="180" r="92" fill="#e9e7c6" opacity=".22"/>
+            <g stroke="#dfe3c2" stroke-width="2.2" opacity=".3" fill="none">
+              <path d="M78 900 C92 660 62 430 104 160"/><path d="M122 900 C138 690 104 470 152 210"/><path d="M366 900 C352 690 380 470 336 250"/>
+            </g>
+            <g fill="#c7d3a5" opacity=".52">
+              <path d="M100 300 C140 280 172 292 190 318 C150 326 120 320 100 300Z"/>
+              <path d="M106 390 C146 366 176 380 196 406 C156 414 124 408 106 390Z"/>
+              <path d="M350 360 C312 342 282 354 264 380 C302 388 332 382 350 360Z"/>
+              <path d="M356 452 C318 434 288 446 270 472 C308 480 338 474 356 452Z"/>
+            </g>
+            <g fill="#f0d9cd" opacity=".85">
+              <circle cx="220" cy="240" r="4"/><circle cx="260" cy="310" r="3"/><circle cx="330" cy="250" r="3.5"/>
+              <circle cx="180" cy="360" r="3"/><circle cx="270" cy="420" r="4"/><circle cx="150" cy="470" r="3"/>
+            </g>
+            <path d="M0 700 C110 660 240 720 420 676 L420 900 L0 900Z" fill="#304a3b"/>
+            <path d="M0 760 C140 724 280 780 420 740 L420 900 L0 900Z" fill="#22382d"/>
+          </svg>
+          <video class="season-art season-video" autoplay muted loop playsinline preload="auto" poster="assets/shijie/spring-poster.jpg" aria-hidden="true" tabindex="-1">
+            <source src="assets/shijie/spring.mp4" type="video/mp4" />
+          </video>
+          <span class="season-panel-top"><i>01</i><em>立春 · 清明</em></span>
+          <span class="season-char">春</span>
+          <span class="season-panel-copy"><strong>春 · 生发</strong><em>笋衣一开，春天就露了头。</em></span>
+          <span class="season-panel-hint">走进春光 <i></i></span>
+        </button>
+
+        <button class="season-panel season-summer is-video" type="button" data-season="summer" aria-label="打开夏日照片环，走进盛夏">
+          <svg class="season-art" viewBox="0 0 420 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="suSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4a4a"/><stop offset=".5" stop-color="#3d7c72"/><stop offset="1" stop-color="#8cb5a4"/></linearGradient>
+            </defs>
+            <rect width="420" height="900" fill="url(#suSky)"/>
+            <circle cx="120" cy="170" r="78" fill="#e8efce" opacity=".18"/>
+            <g fill="#245c54" opacity=".72">
+              <path d="M210 610 C300 570 366 610 356 676 C310 724 214 730 160 690 C130 656 150 622 210 610Z"/>
+              <path d="M52 720 C126 690 184 724 176 774 C138 814 66 816 28 786 C10 758 20 734 52 720Z"/>
+              <path d="M310 760 C356 744 396 762 392 796 C368 822 322 824 298 804 C288 786 296 768 310 760Z"/>
+            </g>
+            <g stroke="#cfe4d4" stroke-width="1.5" fill="none" opacity=".34">
+              <path d="M40 650 C130 640 210 660 300 648"/><path d="M70 690 C160 680 240 700 330 688"/>
+              <path d="M20 820 C130 806 240 830 400 810"/>
+            </g>
+            <g fill="#d7e7cf" opacity=".6">
+              <circle cx="330" cy="300" r="3"/><circle cx="292" cy="360" r="2.5"/><circle cx="70" cy="410" r="2.5"/>
+            </g>
+            <path d="M0 840 C120 820 260 856 420 832 L420 900 L0 900Z" fill="#163f3b"/>
+          </svg>
+          <video class="season-art season-video" autoplay muted loop playsinline preload="auto" poster="assets/shijie/summer-poster.jpg" aria-hidden="true" tabindex="-1">
+            <source src="assets/shijie/summer.mp4" type="video/mp4" />
+          </video>
+          <span class="season-panel-top"><i>02</i><em>立夏 · 小满</em></span>
+          <span class="season-char">夏</span>
+          <span class="season-panel-copy"><strong>夏 · 生长</strong><em>荷叶一卷，把暑气包进清香。</em></span>
+          <span class="season-panel-hint">走进盛夏 <i></i></span>
+        </button>
+
+        <button class="season-panel season-autumn is-video" type="button" data-season="autumn" aria-label="走进秋收，转动一整圈秋日照片">
+          <svg class="season-art" viewBox="0 0 420 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="auSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f4d2e"/><stop offset=".5" stop-color="#b07b42"/><stop offset="1" stop-color="#d9b477"/></linearGradient>
+              <radialGradient id="auSun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffe6ae" stop-opacity=".85"/><stop offset="1" stop-color="#ffe6ae" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="420" height="900" fill="url(#auSky)"/>
+            <circle cx="270" cy="270" r="180" fill="url(#auSun)"/>
+            <circle cx="270" cy="270" r="66" fill="#f4d79a" opacity=".8"/>
+            <g stroke="#eed7a2" stroke-width="2" fill="none" opacity=".55">
+              <path d="M80 900 C90 700 80 560 130 430"/><path d="M120 900 C132 710 112 580 168 470"/>
+              <path d="M330 900 C322 710 338 570 300 450"/><path d="M370 900 C360 720 376 600 342 500"/>
+            </g>
+            <g fill="#f0d393" opacity=".8">
+              <circle cx="132" cy="450" r="4"/><circle cx="150" cy="482" r="3.5"/><circle cx="120" cy="514" r="3.5"/>
+              <circle cx="300" cy="470" r="4"/><circle cx="318" cy="502" r="3.5"/><circle cx="342" cy="522" r="3.5"/>
+            </g>
+            <path d="M0 700 C120 660 250 724 420 680 L420 900 L0 900Z" fill="#5b3d25"/>
+            <path d="M0 780 C150 742 280 800 420 762 L420 900 L0 900Z" fill="#3e2a1b"/>
+          </svg>
+          <video class="season-art season-video" autoplay muted loop playsinline preload="auto" poster="assets/shijie/autumn-poster.jpg" aria-hidden="true" tabindex="-1">
+            <source src="assets/shijie/autumn.mp4" type="video/mp4" />
+          </video>
+          <span class="season-panel-top"><i>03</i><em>立秋 · 白露</em></span>
+          <span class="season-char">秋</span>
+          <span class="season-panel-copy"><strong>秋 · 收获</strong><em>稻穗一低，新米就有了消息。</em></span>
+          <span class="season-panel-hint">走进秋收 <i></i></span>
+        </button>
+
+        <button class="season-panel season-winter is-video" type="button" data-season="winter" aria-label="打开冬季内容，走进冬日螺旋照片">
+          <svg class="season-art" viewBox="0 0 420 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="wiSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1b2c"/><stop offset=".55" stop-color="#243a50"/><stop offset="1" stop-color="#586b7a"/></linearGradient>
+              <radialGradient id="wiLamp" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffc274" stop-opacity=".8"/><stop offset="1" stop-color="#ffc274" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="420" height="900" fill="url(#wiSky)"/>
+            <circle cx="300" cy="170" r="56" fill="#e8e4d6" opacity=".65"/>
+            <circle cx="300" cy="170" r="130" fill="url(#wiLamp)" opacity=".2"/>
+            <g fill="#eee9dd" opacity=".6">
+              <circle cx="80" cy="150" r="2.5"/><circle cx="160" cy="210" r="2"/><circle cx="240" cy="120" r="2.5"/>
+              <circle cx="350" cy="280" r="2"/><circle cx="60" cy="340" r="2"/><circle cx="200" cy="380" r="2.5"/>
+              <circle cx="120" cy="480" r="1.8"/><circle cx="330" cy="420" r="2"/><circle cx="260" cy="520" r="2.2"/>
+            </g>
+            <g transform="translate(210 690)">
+              <ellipse cx="0" cy="120" rx="150" ry="22" fill="#0a1420" opacity=".55"/>
+              <path d="M-120 0 L120 0 L102 120 Q0 150 -102 120 Z" fill="#2b3a48"/>
+              <ellipse cx="0" cy="0" rx="120" ry="30" fill="#3a4b59"/>
+              <ellipse cx="0" cy="-10" rx="104" ry="22" fill="#241f1b"/>
+              <path d="M-78 -4 Q0 -36 78 -4 Q0 22 -78 -4Z" fill="#403025"/>
+              <circle cx="0" cy="-70" r="120" fill="url(#wiLamp)" opacity=".55"/>
+              <g class="winter-steam" stroke="#f2ead9" stroke-width="9" fill="none" stroke-linecap="round" opacity=".5">
+                <path d="M-46 -46 C-64 -80 -28 -96 -44 -132"/><path d="M8 -52 C-10 -92 28 -104 12 -146"/>
+                <path d="M56 -42 C38 -74 72 -94 58 -124"/>
+              </g>
+            </g>
+            <path d="M0 820 C120 800 260 836 420 812 L420 900 L0 900Z" fill="#0a1420"/>
+          </svg>
+          <video class="season-art season-video" autoplay muted loop playsinline preload="auto" poster="assets/shijie/winter-poster.jpg" aria-hidden="true" tabindex="-1">
+            <source src="assets/shijie/winter.mp4" type="video/mp4" />
+          </video>
+          <span class="season-panel-top"><i>04</i><em>立冬 · 小雪</em></span>
+          <span class="season-char">冬</span>
+          <span class="season-panel-copy"><strong>冬 · 收藏</strong><em>锅盖一掀，热气先到了家。</em></span>
+          <span class="season-panel-hint">翻看冬藏 <i></i></span>
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <section class="return-street return-street--night" aria-labelledby="shijieReturnTitle">
+    <span class="return-street__seal" aria-hidden="true">回</span>
+    <p class="return-street__kicker">这一轮四季，走到这里</p>
+    <h2 id="shijieReturnTitle">回到长街，<em>继续往前</em></h2>
+    <p class="return-street__line">从「晚市菜场」门口再往前走，面坊的炉火，该亮了。</p>
+    <a class="return-street__btn" href="index.html?from=caishi">
+      回到长街
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a>
+  </section>
+
+  <footer class="site-footer site-footer--dark">
+    <div class="foot-top">
+      <div class="foot-title">人间有味</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html?from=caishi">回到长街</a>
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </div>
+  </footer>
+
+  <!-- 季节详情 -->
+  <div class="modal season-modal" id="seasonModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="seasonTitle">
+    <div class="modal-backdrop" data-close-season></div>
+    <div class="season-dialog">
+      <button type="button" class="modal-close" data-close-season aria-label="关闭季节详情"><span></span><span></span></button>
+      <div class="season-stage" id="seasonStage"></div>
+      <div class="season-dialog-copy">
+        <p class="modal-kicker" id="seasonKicker">春 · 生发</p>
+        <h2 id="seasonTitle">笋衣一开，春天就露了头</h2>
+        <p class="season-dialog-intro" id="seasonIntro"></p>
+        <div class="season-dialog-terms" id="seasonTerms"></div>
+        <div class="season-reveal" id="seasonReveal">
+          <span class="season-reveal-label">动作之后</span>
+          <h3 id="seasonDish"></h3>
+          <p id="seasonNote"></p>
+        </div>
+        <div class="season-dialog-actions">
+          <button type="button" class="sj-btn sj-btn--ember" id="seasonActionBtn"><span>拖开笋衣</span></button>
+          <button type="button" class="sj-btn-text" id="rememberSeasonBtn">记住这个季节</button>
+        </div>
+      </div>
+      <div class="season-switch">
+        <button type="button" id="seasonPrev" aria-label="上一个季节">←</button>
+        <span id="seasonSwitchLabel">1 / 4 · 春</span>
+        <button type="button" id="seasonNext" aria-label="下一个季节">→</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="season-toast" id="seasonToast" role="status" aria-live="polite"></div>
+
+  <!-- 春 · 照片隧道 -->
+  <div class="pg" id="passageGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pgTitle">
+    <div class="pg__stage" id="pgStage">
+      <div class="pg__canvas" id="pgCanvas" tabindex="0" role="application" aria-label="春日光廊。滚轮向前或向后，按住加速，拖动环顾，点击两侧照片放大查看。"></div>
+      <div class="pg__vignette" aria-hidden="true"></div>
+    </div>
+    <div class="pg__grain" aria-hidden="true"></div>
+
+    <header class="pg__head">
+      <div class="pg__brand">
+        <span class="pg__num">01</span>
+        <p>
+          <em>时节之味 · 春日光廊</em>
+          <strong id="pgTitle">春 · 生发</strong>
+        </p>
+      </div>
+      <button class="pg__close" id="pgClose" type="button">
+        <span>回到四季</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <div class="pg__intro" id="pgIntro" aria-hidden="true">
+      <span>SPRING PASSAGE</span>
+      <strong>走进春光</strong>
+    </div>
+
+    <div class="pg__caption" id="pgCaption" aria-live="polite">
+      <span id="pgCaptionCount">01 / 24</span>
+      <strong id="pgCaptionTitle">春日光景 01</strong>
+    </div>
+
+    <footer class="pg__foot">
+      <div class="pg__foot-copy">
+        <span class="pg__badge">春 · 立春 / 清明</span>
+        <p>
+          <strong>笋衣一开，春天就露了头。</strong>
+        </p>
+      </div>
+    </footer>
+
+    <div class="pg__loading" id="pgLoading">春日正在铺开…</div>
+
+    <div class="pg__fallback" id="pgFallback" hidden>
+      <span>春 · 生发</span>
+      <h2>这条光廊需要 WebGL</h2>
+      <p>当前浏览器没有开启画面渲染。换用最新版 Chrome 或 Edge，再走进来。</p>
+      <button type="button" id="pgFallbackClose">回到四季</button>
+    </div>
+  </div>
+
+  <!-- 夏 · 柔性照片环 -->
+  <div class="fx" id="flexSummer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fxTitle">
+    <div class="fx__stage">
+      <div class="fx__focus-bg" id="fxFocusBg" aria-hidden="true"></div>
+      <div class="fx__canvas" id="fxCanvas" tabindex="0" role="application" aria-label="夏日照片环。左右拖动或滚轮翻看，点击照片放大，ESC 返回。"></div>
+    </div>
+    <div class="fx__grain" aria-hidden="true"></div>
+
+    <header class="fx__head">
+      <div class="fx__brand">
+        <span class="fx__num">02</span>
+        <p>
+          <em>时节之味 · 夏日光廊</em>
+          <strong id="fxTitle">夏 · 生长</strong>
+        </p>
+      </div>
+      <button class="fx__close" id="fxClose" type="button">
+        <span>回到四季</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <div class="fx__intro" id="fxIntro" aria-hidden="true">
+      <span>SUMMER FLEX</span>
+      <strong>走进盛夏</strong>
+    </div>
+
+    <div class="fx__caption" id="fxCaption" aria-live="polite">
+      <strong id="fxCaptionTitle">夏季臻选</strong>
+      <span class="fx__count" id="fxCaptionCount"></span>
+    </div>
+
+    <footer class="fx__foot">
+      <div class="fx__foot-copy">
+        <span class="fx__badge">夏 · 立夏 / 小满</span>
+        <p>
+          <strong>荷叶一卷，把暑气包进清香。</strong>
+        </p>
+      </div>
+    </footer>
+
+    <div class="fx__loading" id="fxLoading">夏日的荷叶正在展开…</div>
+
+    <div class="fx__fallback" id="fxFallback" hidden>
+      <span>夏 · 生长</span>
+      <h2>这排夏日照片需要 WebGL</h2>
+      <p>当前浏览器没有开启画面渲染。换用最新版 Chrome 或 Edge，再走进来。</p>
+      <button type="button" id="fxFallbackClose">回到四季</button>
+    </div>
+  </div>
+
+  <!-- 秋 · 圆环照片 -->
+  <div class="cg" id="autumnCircle" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cgTitle">
+    <div class="cg__stage" id="cgStage" tabindex="0" role="application" aria-label="秋日圆环。拖动旋转，滚轮或方向键也能转，点击照片放大，ESC 返回。">
+      <div class="cg__atmosphere" id="cgAtmosphere" aria-hidden="true"></div>
+      <div class="cg__focus-bg" id="cgFocusBg" aria-hidden="true"></div>
+      <div class="cg__orbit-line" aria-hidden="true"></div>
+      <div class="cg__orbit-line cg__orbit-line--inner" aria-hidden="true"></div>
+      <div class="cg__haze" aria-hidden="true">秋</div>
+      <div class="cg__orbit" id="cgOrbit"></div>
+    </div>
+    <div class="cg__grain" aria-hidden="true"></div>
+
+    <header class="cg__head">
+      <div class="cg__brand">
+        <span class="cg__num">03</span>
+        <p>
+          <em>时节之味 · 秋日圆环</em>
+          <strong id="cgTitle">秋 · 收成</strong>
+        </p>
+      </div>
+      <button class="cg__close" id="cgClose" type="button">
+        <span>回到四季</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <div class="cg__intro" id="cgIntro" aria-hidden="true">
+      <span>AUTUMN CIRCLE</span>
+      <strong>秋色围成一圈</strong>
+    </div>
+
+    <div class="cg__caption" id="cgCaption" aria-live="polite">
+      <strong id="cgCaptionTitle">秋收影像</strong>
+      <span id="cgCaptionCount"></span>
+    </div>
+
+    <footer class="cg__foot">
+      <div class="cg__foot-copy">
+        <span class="cg__badge">秋 · 立秋 / 霜降</span>
+        <p>
+          <strong>稻穗一垂，把整个院子染成金色。</strong>
+        </p>
+      </div>
+    </footer>
+
+    <div class="cg__loading" id="cgLoading">秋色正在围拢…</div>
+  </div>
+
+  <!-- 冬 · 螺旋照片 -->
+  <div class="sp" id="winterSpiral" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="spTitle">
+    <div class="sp__stage" id="spStage" tabindex="0" role="application" aria-label="冬日螺旋。照片向上缓缓转动，上下拖动或滚轮可前后翻看，点击照片放大，ESC 返回。">
+      <div class="sp__atmosphere" id="spAtmosphere" aria-hidden="true"></div>
+      <div class="sp__snow" aria-hidden="true"></div>
+      <div class="sp__axis" aria-hidden="true"></div>
+      <div class="sp__haze" aria-hidden="true">冬</div>
+      <div class="sp__track" id="spTrack"></div>
+    </div>
+    <div class="sp__grain" aria-hidden="true"></div>
+
+    <header class="sp__head">
+      <div class="sp__brand">
+        <span class="sp__num">04</span>
+        <p>
+          <em>时节之味 · 冬日螺旋</em>
+          <strong id="spTitle">冬 · 收藏</strong>
+        </p>
+      </div>
+      <button class="sp__close" id="spClose" type="button">
+        <span>回到四季</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <div class="sp__intro" id="spIntro" aria-hidden="true">
+      <span>WINTER SPIRAL</span>
+      <strong>腊味一层层转上来</strong>
+    </div>
+
+    <footer class="sp__foot">
+      <div class="sp__foot-copy">
+        <span class="sp__badge">冬 · 立冬 / 小雪</span>
+        <p>
+          <strong>锅盖一掀，热气先到了家。</strong>
+        </p>
+      </div>
+    </footer>
+
+    <div class="sp__loading" id="spLoading">冬日的腊味正在转上来…</div>
+
+    <div class="sp__lb" id="spLightbox" aria-hidden="true">
+      <button class="sp__lb-close" id="spLightboxClose" type="button">
+        <span>收起</span>
+        <i aria-hidden="true"></i>
+      </button>
+      <button class="sp__lb-prev" id="spLightboxPrev" type="button" aria-label="上一张">
+        <i aria-hidden="true"></i>
+      </button>
+      <figure class="sp__lb-figure">
+        <img id="spLightboxImg" alt="" draggable="false" />
+        <figcaption>
+          <strong id="spLightboxTitle"></strong>
+          <span id="spLightboxCount"></span>
+        </figcaption>
+      </figure>
+      <button class="sp__lb-next" id="spLightboxNext" type="button" aria-label="下一张">
+        <i aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/vendor/three-diorama.min.js"></script>
+  <script src="js/passage-spring-photos.js"></script>
+  <script src="js/passage-gallery.js"></script>
+  <script src="js/flex-summer-photos.js"></script>
+  <script src="js/flex-carousel.js"></script>
+  <script src="js/autumn-circle-photos.js"></script>
+  <script src="js/circle-gallery.js"></script>
+  <script src="js/winter-spiral-photos.js"></script>
+  <script src="js/infinite-spiral.js"></script>
+  <script src="js/shijie.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>

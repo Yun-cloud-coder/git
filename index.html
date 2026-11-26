@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0907" />
+  <title>人间有味 · 走进一条从清晨到深夜的烟火街</title>
+  <meta name="description" content="从清晨第一屉包子，走到深夜最后一盏灯。第一人称走进一条老城早市巷子，两侧铺子依次亮起，点门脸便进入人间烟火、水土、时节、匠心与味觉记忆。" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/street3d.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(location.search).get("from")) {
+          document.documentElement.classList.add("is-resuming");
+          if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        }
+      } catch (e) { /* file:// */ }
+    })();
+  </script>
+</head>
+<body class="home home--cinema home3d">
+
+  <div class="scene-fallback" id="sceneFallback" aria-hidden="true"></div>
+  <canvas id="streetScene" aria-label="第一人称视角的老城早市长街，两侧是早点、食铺、菜场、面坊与邮局" tabindex="-1"></canvas>
+  <div class="scene-grade" aria-hidden="true"></div>
+  <div class="scene-vignette" aria-hidden="true"></div>
+  <div class="scene-grain" aria-hidden="true"></div>
+
+  <div class="loader3d" id="loader3d" role="status" aria-live="polite">
+    <div class="loader3d__inner">
+      <span class="loader3d__lantern" aria-hidden="true"></span>
+      <p>点灯，进巷</p>
+      <div class="loader3d__bar"><i id="loadFill"></i></div>
+      <small>人间有味 · 早市巷</small>
+    </div>
+  </div>
+
+  <header class="site-head site-head--street site-head--cinema" id="siteHead">
+    <a class="brand" href="index.html" aria-label="人间有味 首页">
+      <span class="brand-text">
+        <span class="brand-name">人间有味</span>
+        <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="板块导航">
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+      <i></i><i></i>
+    </button>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+
+      <div class="menu-list">
+      <a class="menu-link" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <aside class="route3d" id="route3d" aria-label="长街站点">
+    <span class="route3d__line" aria-hidden="true"><i id="routeFill"></i></span>
+    <a href="#zaodian" data-zone="0"><span>早点</span><i></i></a>
+    <a href="#mianguan" data-zone="1"><span>食铺</span><i></i></a>
+    <a href="#caishichang" data-zone="2"><span>菜场</span><i></i></a>
+    <a href="#luwei" data-zone="3"><span>面坊</span><i></i></a>
+    <a href="#youju" data-zone="4"><span>邮局</span><i></i></a>
+  </aside>
+
+  <div class="hud3d" id="hud3d" aria-live="polite">
+    <p class="hud3d__phase" id="hudPhase">清晨 · 天刚亮</p>
+    <p class="hud3d__time"><span id="hudTime">05:30</span><small id="hudPlace">巷口</small></p>
+  </div>
+
+  <div class="resume-cue" id="resumeCue" role="status" aria-live="polite" hidden>
+    <span class="resume-cue__seal" aria-hidden="true">续</span>
+    <p>已回到 <b id="resumeName">老张早点</b><em>从这里，继续往街里走</em></p>
+    <button type="button" id="resumeClose" aria-label="收起提示">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <main id="content">
+
+    <section class="hero3d" id="launch" aria-labelledby="heroTitle">
+      <div class="hero3d__inner">
+        <p class="hero3d__kicker">街巷烟火 · 人间百味</p>
+        <h1 class="hero3d__title" id="heroTitle">人间有味</h1>
+        <p class="hero3d__sub"><i aria-hidden="true"></i><span>一箸一味，皆是人情</span><i aria-hidden="true"></i></p>
+        <p class="hero3d__line">从第一屉白汽，走到最后一盏灯。</p>
+        <a class="hero3d__enter" href="#zaodian" data-glide>
+          <span>走进烟火长街</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+      <p class="hero3d__meta"><span>01 / 长街</span><span>05:12 · 天将亮</span></p>
+    </section>
+
+    <div class="journey3d" id="journey3d">
+
+      <section class="zone3d zone3d--plate-right" id="zaodian" data-zone="0" data-stop="0.12" data-shop="zaodian" aria-labelledby="zaodianTitle">
+        <div class="plate3d">
+          <p class="plate3d__tag"><span>01</span> 05:30 · 清晨</p>
+          <h2 class="plate3d__title" id="zaodianTitle">老张早点</h2>
+          <p class="plate3d__line">第一屉刚出笼，热气还烫手。</p>
+          <p class="plate3d__desc">天还没亮透，蒸笼先醒了。老张把第一屉包子端上案，白汽从竹屉缝里往上冒，巷口的灯还亮着。</p>
+          <a class="plate3d__link" href="yanhuo.html" data-shop-link>推门进去
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="plate3d__seal" aria-hidden="true">烟火</span>
+        </div>
+      </section>
+
+      <section class="zone3d zone3d--plate-left" id="mianguan" data-zone="1" data-stop="0.30" data-shop="mianguan" aria-labelledby="mianguanTitle">
+        <div class="plate3d">
+          <p class="plate3d__tag"><span>02</span> 11:40 · 午间</p>
+          <h2 class="plate3d__title" id="mianguanTitle">三省食铺</h2>
+          <p class="plate3d__line">一桌摆开三省的味道。</p>
+          <p class="plate3d__desc">湖北的藕、江西的粉、山东的面，各占一角。进门不用点菜，先问一句：今天想尝哪一省的水土？</p>
+          <a class="plate3d__link" href="shuitu.html" data-shop-link>进去看看
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="plate3d__seal" aria-hidden="true">水土</span>
+        </div>
+      </section>
+
+      <section class="zone3d zone3d--plate-right" id="caishichang" data-zone="2" data-stop="0.50" data-shop="caishi" aria-labelledby="caishiTitle">
+        <div class="plate3d">
+          <p class="plate3d__tag"><span>03</span> 17:20 · 傍晚</p>
+          <h2 class="plate3d__title" id="caishiTitle">晚市菜场</h2>
+          <p class="plate3d__line">今天的藕，粉得很。</p>
+          <p class="plate3d__desc">收摊前，菜场的灯最暖。带泥的藕、刚割的韭菜，还有摊主一句“今天的粉得很”，把时令说得很具体。</p>
+          <a class="plate3d__link" href="shijie.html" data-shop-link>停下看看
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="plate3d__seal" aria-hidden="true">时节</span>
+        </div>
+      </section>
+
+      <section class="zone3d zone3d--plate-left" id="luwei" data-zone="3" data-stop="0.70" data-shop="luwei" aria-labelledby="luweiTitle">
+        <div class="plate3d">
+          <p class="plate3d__tag"><span>04</span> 19:30 · 入夜</p>
+          <h2 class="plate3d__title" id="luweiTitle">老炉面坊</h2>
+          <p class="plate3d__line">一炉老火，一碗面，急不得。</p>
+          <p class="plate3d__desc">老炉子从天亮烧到天黑。面在滚水里一沉一浮，捞起、淋酱、撒一把葱花，火候到了才肯起锅。檐下晾着的，是刚压好的面。</p>
+          <a class="plate3d__link" href="jiangxin.html" data-shop-link>推门进去
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="plate3d__seal" aria-hidden="true">匠心</span>
+        </div>
+      </section>
+
+      <section class="zone3d zone3d--plate-right" id="youju" data-zone="4" data-stop="0.89" data-shop="youju" aria-labelledby="youjuTitle">
+        <div class="plate3d">
+          <p class="plate3d__tag"><span>05</span> 22:50 · 深夜</p>
+          <h2 class="plate3d__title" id="youjuTitle">街尾邮局</h2>
+          <p class="plate3d__line">写一张，寄给以后的自己。</p>
+          <p class="plate3d__desc">街尾只剩一盏灯。绿色邮筒还站在门口，像在等一封没有寄出的信。走到这里，把一路的味道写下来；写完了，再回到街上，看看巷底的灯。</p>
+          <a class="plate3d__link" href="jiyi.html" data-shop-link>去写一张
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="plate3d__seal" aria-hidden="true">记忆</span>
+        </div>
+      </section>
+
+      <section class="zone3d zone3d--finale" id="finale" data-stop="1" aria-labelledby="finaleTitle">
+        <div class="finale3d">
+          <p class="finale3d__kicker">街走完了</p>
+          <h2 id="finaleTitle">味道还在</h2>
+          <i aria-hidden="true"></i>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer site-footer--dark">
+    <div class="foot-top">
+      <div class="foot-title">人间有味</div>
+    </div>
+    <div class="foot-links">
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </div>
+  </footer>
+
+  <div class="shop-tip" id="shopTip" aria-hidden="true">
+    <b id="shopTipName">老张早点</b><em>推门进去</em>
+  </div>
+
+  <div class="enter-veil" id="enterVeil" aria-hidden="true">
+    <div class="enter-veil__inner">
+      <small>人间有味</small>
+      <strong id="enterName">老张早点</strong>
+      <em>推门，进去坐坐</em>
+    </div>
+  </div>
+
+  <noscript><p style="position:fixed;left:20px;bottom:20px;z-index:500;padding:12px 16px;background:#f5ecda;color:#242019">请开启 JavaScript，巷子才会往里延伸。</p></noscript>
+
+  <script src="js/common.js"></script>
+  <script src="js/vendor/three.min.js"></script>
+  <script src="js/vendor/three-addons.js"></script>
+  <script src="assets/3d/textures.js"></script>
+  <script src="js/street3d.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>

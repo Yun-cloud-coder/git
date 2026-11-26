@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e0b07" />
+  <title>味觉记忆 · 巷里巷外，寻味人间 | 人间有味</title>
+  <meta name="description" content="走过一条街，记住一种味。在夜色里挑一张明信片，写下街头巷尾的热闹，寄出人间寻常的滋味。" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/jiyi.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+</head>
+<body class="jiyi-page page-enter memory-page">
+
+  <a class="skip-link" href="#memoryMain">跳到明信片</a>
+
+  <header class="site-head site-head--sand" id="siteHead">
+    <a class="head-back" href="index.html?from=youju" aria-label="回到长街">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span>回到长街</span>
+    </a>
+    <a class="brand" href="index.html" aria-label="人间有味 首页">
+      <span class="brand-text">
+        <span class="brand-name">人间有味</span>
+        <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="板块导航">
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html" class="is-active" aria-current="page">记忆</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+      <i></i><i></i>
+    </button>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+      <a class="menu-back" href="index.html?from=youju">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        回到长街
+      </a>
+      <div class="menu-list">
+      <a class="menu-link" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link is-active" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <main class="memory-main" id="memoryMain">
+
+    <!-- ============ 封面：暖黑夜色、棕榈影与鎏金粒子标题 ============ -->
+    <section class="memory-cover" id="memoryCover" data-stage="cover" aria-labelledby="memoryCoverTitle">
+      <div class="cover-sand" aria-hidden="true"></div>
+      <div class="cover-glow" aria-hidden="true"></div>
+
+      <svg class="palm palm--nw" viewBox="0 0 520 360" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M6 354C86 292 186 206 328 96" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="72" cy="300" rx="52" ry="8" transform="rotate(-31 72 300)"/>
+          <ellipse cx="104" cy="274" rx="58" ry="8" transform="rotate(-35 104 274)"/>
+          <ellipse cx="138" cy="246" rx="60" ry="8" transform="rotate(-39 138 246)"/>
+          <ellipse cx="174" cy="218" rx="62" ry="8" transform="rotate(-43 174 218)"/>
+          <ellipse cx="210" cy="190" rx="60" ry="8" transform="rotate(-47 210 190)"/>
+          <ellipse cx="246" cy="162" rx="56" ry="8" transform="rotate(-51 246 162)"/>
+          <ellipse cx="282" cy="136" rx="50" ry="8" transform="rotate(-55 282 136)"/>
+          <ellipse cx="318" cy="112" rx="42" ry="7" transform="rotate(-59 318 112)"/>
+          <ellipse cx="88" cy="292" rx="48" ry="7" transform="rotate(16 88 292)"/>
+          <ellipse cx="122" cy="264" rx="54" ry="7" transform="rotate(12 122 264)"/>
+          <ellipse cx="158" cy="234" rx="58" ry="7" transform="rotate(8 158 234)"/>
+          <ellipse cx="194" cy="204" rx="60" ry="7" transform="rotate(4 194 204)"/>
+          <ellipse cx="230" cy="174" rx="58" ry="7" transform="rotate(0 230 174)"/>
+          <ellipse cx="266" cy="146" rx="52" ry="7" transform="rotate(-4 266 146)"/>
+          <ellipse cx="302" cy="120" rx="44" ry="7" transform="rotate(-8 302 120)"/>
+        </g>
+        <g fill="currentColor" opacity=".72">
+          <path d="M22 360C120 316 208 252 334 166" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="92" cy="316" rx="46" ry="7" transform="rotate(-25 92 316)"/>
+          <ellipse cx="130" cy="286" rx="52" ry="7" transform="rotate(-30 130 286)"/>
+          <ellipse cx="168" cy="258" rx="54" ry="7" transform="rotate(-35 168 258)"/>
+          <ellipse cx="206" cy="230" rx="52" ry="7" transform="rotate(-40 206 230)"/>
+          <ellipse cx="244" cy="204" rx="46" ry="7" transform="rotate(-45 244 204)"/>
+          <ellipse cx="282" cy="180" rx="38" ry="6" transform="rotate(-50 282 180)"/>
+        </g>
+      </svg>
+
+      <svg class="palm palm--se" viewBox="0 0 460 320" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M2 318C116 262 224 204 380 128" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="66" cy="280" rx="48" ry="7" transform="rotate(-27 66 280)"/>
+          <ellipse cx="104" cy="254" rx="54" ry="7" transform="rotate(-32 104 254)"/>
+          <ellipse cx="144" cy="226" rx="56" ry="7" transform="rotate(-37 144 226)"/>
+          <ellipse cx="184" cy="198" rx="54" ry="7" transform="rotate(-42 184 198)"/>
+          <ellipse cx="224" cy="170" rx="48" ry="7" transform="rotate(-47 224 170)"/>
+          <ellipse cx="264" cy="144" rx="40" ry="6" transform="rotate(-52 264 144)"/>
+          <ellipse cx="84" cy="266" rx="42" ry="6" transform="rotate(6 84 266)"/>
+          <ellipse cx="124" cy="238" rx="48" ry="6" transform="rotate(1 124 238)"/>
+          <ellipse cx="164" cy="210" rx="50" ry="6" transform="rotate(-4 164 210)"/>
+          <ellipse cx="204" cy="182" rx="46" ry="6" transform="rotate(-9 204 182)"/>
+          <ellipse cx="244" cy="156" rx="38" ry="6" transform="rotate(-14 244 156)"/>
+        </g>
+      </svg>
+
+      <svg class="footprints" viewBox="0 0 240 200" aria-hidden="true">
+        <g fill="currentColor">
+          <g transform="rotate(-18 60 40)">
+            <ellipse cx="58" cy="44" rx="8" ry="14"/>
+            <circle cx="50" cy="26" r="3"/><circle cx="56" cy="23" r="3.4"/><circle cx="63" cy="24" r="3"/><circle cx="69" cy="28" r="2.6"/>
+          </g>
+          <g transform="rotate(-8 100 88)">
+            <ellipse cx="98" cy="92" rx="7.4" ry="13"/>
+            <circle cx="91" cy="75" r="2.8"/><circle cx="97" cy="72" r="3.1"/><circle cx="103" cy="73" r="2.8"/><circle cx="108" cy="77" r="2.4"/>
+          </g>
+          <g transform="rotate(-18 142 132)">
+            <ellipse cx="138" cy="136" rx="8" ry="14"/>
+            <circle cx="130" cy="118" r="3"/><circle cx="136" cy="115" r="3.4"/><circle cx="143" cy="116" r="3"/><circle cx="149" cy="120" r="2.6"/>
+          </g>
+          <g transform="rotate(-8 180 174)">
+            <ellipse cx="178" cy="178" rx="7.4" ry="13"/>
+            <circle cx="171" cy="161" r="2.8"/><circle cx="177" cy="158" r="3.1"/><circle cx="183" cy="159" r="2.8"/><circle cx="188" cy="163" r="2.4"/>
+          </g>
+        </g>
+      </svg>
+
+      <div class="cover-inner">
+        <div class="cover-copy">
+          <p class="cover-eyebrow">
+            <span class="cover-eyebrow__num">05</span>
+            <span class="cover-eyebrow__line" aria-hidden="true"></span>
+            <span>味觉记忆 · A POSTCARD TO YOURSELF</span>
+          </p>
+
+          <h1 class="cover-title" id="memoryCoverTitle">
+            <span class="sr-only">巷里巷外，寻味人间</span>
+            <canvas id="memoryTitleCanvas" aria-hidden="true"></canvas>
+            <button class="title-replay" id="titleReplay" type="button" aria-label="再看一次标题粒子效果">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/>
+              </svg>
+            </button>
+          </h1>
+
+          <p class="cover-lede">走过一条长街，记住一种味道。<br />把街巷的热闹写下来，寄给以后的自己。</p>
+
+          <div class="cover-actions">
+            <button class="cover-btn" id="memoryEnter" type="button" data-memory-enter>
+              <span class="cover-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <path d="M2 7c3-3 6-3 9 0s6 3 9 0 6-3 9 0"/>
+                  <path d="M2 13c3-3 6-3 9 0s6 3 9 0 6-3 9 0" opacity=".7"/>
+                  <path d="M2 19c3-3 6-3 9 0s6 3 9 0 6-3 9 0" opacity=".42"/>
+                </svg>
+              </span>
+              <span>写一张明信片</span>
+              <svg class="cover-btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <a class="cover-return" href="index.html?from=youju">
+            <span class="cover-return__seal" aria-hidden="true">回</span>
+            <span class="cover-return__text">信还没写，先回长街</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="cover-scene">
+          <div class="sand-card" aria-hidden="true">
+            <span class="sand-card__tape"></span>
+            <div class="sand-card__photo">
+              <img src="assets/images/street/placeholder-post.jpg" alt="" />
+              <span class="sand-card__photo-shade"></span>
+            </div>
+            <div class="sand-card__body">
+              <span class="sand-card__hand">风从巷口来，</span>
+              <span class="sand-card__hand sand-card__hand--second">带着一点烟火气。</span>
+              <span class="sand-card__caption">写给以后 · 人间有味</span>
+            </div>
+            <span class="sand-card__stamp">
+              <b>人</b><i>间</i><em>有</em><strong>味</strong>
+            </span>
+            <span class="sand-card__postmark">05 · 10<br>POST</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 写信：墨金海明信片 + 侧边编辑 ============ -->
+    <section class="memory-write" id="memoryWrite" data-stage="write" aria-labelledby="writeTitle" hidden>
+      <canvas class="write-wave" id="memoryWave" aria-hidden="true"></canvas>
+      <div class="write-sand" aria-hidden="true"></div>
+      <div class="write-glow" aria-hidden="true"></div>
+      <svg class="palm palm--write" viewBox="0 0 460 320" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M2 318C116 262 224 204 380 128" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="66" cy="280" rx="48" ry="7" transform="rotate(-27 66 280)"/>
+          <ellipse cx="104" cy="254" rx="54" ry="7" transform="rotate(-32 104 254)"/>
+          <ellipse cx="144" cy="226" rx="56" ry="7" transform="rotate(-37 144 226)"/>
+          <ellipse cx="184" cy="198" rx="54" ry="7" transform="rotate(-42 184 198)"/>
+          <ellipse cx="224" cy="170" rx="48" ry="7" transform="rotate(-47 224 170)"/>
+          <ellipse cx="264" cy="144" rx="40" ry="6" transform="rotate(-52 264 144)"/>
+          <ellipse cx="84" cy="266" rx="42" ry="6" transform="rotate(6 84 266)"/>
+          <ellipse cx="124" cy="238" rx="48" ry="6" transform="rotate(1 124 238)"/>
+          <ellipse cx="164" cy="210" rx="50" ry="6" transform="rotate(-4 164 210)"/>
+          <ellipse cx="204" cy="182" rx="46" ry="6" transform="rotate(-9 204 182)"/>
+        </g>
+      </svg>
+
+      <div class="write-inner">
+        <div class="write-bar">
+          <button type="button" class="write-back" data-memory-back>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            <span>回到封面</span>
+          </button>
+          <p class="write-bar__eyebrow">05 · 味觉记忆 / 写给以后</p>
+        </div>
+
+        <div class="write-grid">
+          <div class="write-preview-col">
+            <div class="postcard-preview" id="postcardPreview" data-template="landscape">
+              <canvas id="postcardCanvas" width="2400" height="1600" aria-label="明信片实时预览"></canvas>
+            </div>
+          </div>
+
+          <aside class="write-panel" aria-label="写一张味觉明信片">
+            <div class="write-panel__head">
+              <p class="write-panel__eyebrow">WRITE IT DOWN</p>
+              <h2 id="writeTitle" tabindex="-1">写一张明信片</h2>
+            </div>
+
+            <form class="postcard-form" id="postcardForm" autocomplete="off" aria-label="写一张味觉明信片">
+              <div class="form-block">
+                <span class="form-label" id="categoryLabel">这一味，属于</span>
+                <div class="chip-row" id="categoryChips" role="group" aria-labelledby="categoryLabel">
+                  <button type="button" class="is-active" data-cat="家乡" aria-pressed="true">家乡</button>
+                  <button type="button" data-cat="童年" aria-pressed="false">童年</button>
+                  <button type="button" data-cat="家人" aria-pressed="false">家人</button>
+                  <button type="button" data-cat="旅行" aria-pressed="false">旅行</button>
+                </div>
+              </div>
+
+              <label class="form-block" for="memoryFood">
+                <span class="form-label">食物的名字 <em>最多 20 字</em></span>
+                <input id="memoryFood" type="text" maxlength="20" placeholder="比如：外婆的藕汤" />
+                <span class="field-count" id="foodCount" aria-hidden="true">0 / 20</span>
+              </label>
+
+              <label class="form-block" for="memoryText">
+                <span class="form-label">一段回忆 <em>最多 120 字</em></span>
+                <textarea id="memoryText" maxlength="120" rows="3" placeholder="写下那个让你记住这一味的瞬间……"></textarea>
+                <span class="field-count" id="textCount" aria-hidden="true">0 / 120</span>
+              </label>
+
+              <div class="form-block">
+                <span class="form-label" id="templateLabel">明信片模板</span>
+                <div class="template-switch" id="templateSwitch" role="group" aria-labelledby="templateLabel">
+                  <button type="button" class="is-active" data-template="landscape" aria-pressed="true">横版街景</button>
+                  <button type="button" data-template="portrait" aria-pressed="false">竖版照片</button>
+                </div>
+              </div>
+
+              <div class="form-block">
+                <span class="form-label">一张照片 <em>可选 · 5MB 以内</em></span>
+                <div class="upload-row">
+                  <label class="upload-btn" for="memoryPhoto">选择照片<input class="upload-input" id="memoryPhoto" type="file" accept="image/png,image/jpeg,image/webp" /></label>
+                  <span class="upload-name" id="uploadName" aria-live="polite">未选择</span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="card-btn card-btn--send" id="sendCard">
+                  <span>寄到街尾</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3z"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+                </button>
+                <button type="button" class="card-btn card-btn--ghost" id="downloadCard">
+                  <span>下载</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+                </button>
+                <button type="button" class="card-btn card-btn--quiet" id="resetCard">重写</button>
+              </div>
+            </form>
+          </aside>
+        </div>
+
+        <footer class="write-foot">
+          <a class="write-foot__link" href="index.html?from=youju">回到长街 · 继续往前</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="memory-transition" id="memoryTransition" aria-hidden="true"></div>
+  <div class="postcard-toast" id="postcardToast" role="status" aria-live="polite"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/memory-wave.js"></script>
+  <script src="js/jiyi.js"></script>
+  <script src="js/memory-cover.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>

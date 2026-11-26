@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1f150e" />
+  <title>匠心之味 · 一碗热干面的清晨 | 人间有味</title>
+  <meta name="description" content="走进兔子的厨房：从抽屉里取出热干面的食材，到灶前拌一碗面，再走到照片墙前，把这一路的味道挂起来。" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/jiangxin.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+</head>
+<body class="jx-page is-loading" data-mode="intro">
+
+  <div class="jx-stage" id="jxStage" aria-hidden="true"></div>
+  <div class="jx-vignette" aria-hidden="true"></div>
+  <div class="jx-grain" aria-hidden="true"></div>
+  <div class="jx-lightpool" aria-hidden="true"></div>
+
+  <header class="site-head jx-head" id="siteHead">
+    <div class="jx-head__left">
+      <a class="jx-back" href="index.html?from=luwei" aria-label="回到长街">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        <span>回到长街</span>
+      </a>
+      <i class="jx-head__div" aria-hidden="true"></i>
+      <a class="brand" href="index.html" aria-label="人间有味 首页">
+        <span class="brand-text">
+          <span class="brand-name">人间有味</span>
+          <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="jx-head__chapter" aria-hidden="true">
+      <span>第四章</span>
+      <i></i>
+      <b>匠心之味</b>
+      <em>一碗热干面的清晨</em>
+    </div>
+
+    <div class="jx-head__right">
+      <button class="jx-icon" id="jxSound" type="button" aria-pressed="true" aria-label="关闭声音">
+        <svg class="jx-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+        <svg class="jx-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+        <span>声音</span>
+      </button>
+      <button class="jx-icon" id="jxReset" type="button" aria-label="回到房间视角">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg>
+        <span>视角</span>
+      </button>
+      <nav class="main-nav" aria-label="板块导航">
+        <a href="yanhuo.html">人间烟火</a>
+        <a href="shuitu.html">水土</a>
+        <a href="shijie.html">时节</a>
+        <a href="jiangxin.html" class="is-active" aria-current="page">匠心</a>
+        <a href="jiyi.html">记忆</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+        <i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+      <a class="menu-back" href="index.html?from=luwei">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        回到长街
+      </a>
+      <div class="menu-list">
+      <a class="menu-link" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link is-active" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <div class="jx-loader" id="jxLoader" role="status" aria-live="polite">
+    <span class="jx-loader__bun" aria-hidden="true"></span>
+    <span id="jxLoaderText">厨房的灯正在亮起来</span>
+  </div>
+
+  <section class="jx-intro" id="jxIntro" aria-labelledby="jxIntroTitle">
+    <div class="jx-intro__chapter" aria-hidden="true">04</div>
+    <div class="jx-intro__inner">
+      <p class="jx-eyebrow"><span>匠心之味</span><i></i><span>ONE BOWL, ONE MORNING</span></p>
+      <h1 id="jxIntroTitle">一碗面的时间，<br /><em>也是一座城的早晨</em></h1>
+      <p class="jx-intro__lead">你现在是这只兔子。抽屉里有面，灶上有锅，墙上有这一路拍下的照片。<br />先备料，再下锅；拌好这一碗，端到照片墙前。</p>
+      <div class="jx-intro__actions">
+        <button class="jx-btn" id="jxStart" type="button">
+          走进厨房
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="jx-intro__side" aria-hidden="true">备 料 · 下 锅 · 拌 面 · 上 墙</p>
+    <p class="jx-intro__foot" aria-hidden="true">04 / 06 · 清晨的灶间</p>
+  </section>
+
+  <div class="jx-hud" id="jxHud">
+    <div class="jx-basket" id="jxBasket" aria-live="polite">
+      <span class="jx-basket__label">竹篮</span>
+      <div class="jx-basket__items" id="jxBasketItems"><em>还空着</em></div>
+    </div>
+
+    <div class="jx-cue" id="jxCue">
+      <i class="jx-cue__dot" aria-hidden="true"></i>
+      <span id="jxCueText">点虚线箭头，去拉开抽屉。</span>
+    </div>
+
+    <ol class="jx-steps" id="jxSteps" aria-label="制作步骤">
+      <li class="is-active" data-step="1"><b>01</b><span>取食材</span></li>
+      <li data-step="2"><b>02</b><span>下锅拌面</span></li>
+      <li data-step="3"><b>03</b><span>照片墙</span></li>
+    </ol>
+  </div>
+
+  <button class="jx-hotspot" id="jxHotDrawer" data-spot="drawer" type="button">
+    <span class="jx-hotspot__key">01</span>
+    <span class="jx-hotspot__txt"><b>拉开抽屉</b><em>面 · 芝麻酱 · 六样配料</em></span>
+    <span class="jx-hotspot__tail" aria-hidden="true"></span>
+  </button>
+  <button class="jx-hotspot" id="jxHotStove" data-spot="stove" type="button">
+    <span class="jx-hotspot__key">02</span>
+    <span class="jx-hotspot__txt"><b>走到灶前</b><em>下锅 · 淋酱 · 拌面</em></span>
+    <span class="jx-hotspot__tail" aria-hidden="true"></span>
+  </button>
+  <button class="jx-hotspot" id="jxHotWall" data-spot="wall" type="button">
+    <span class="jx-hotspot__key">03</span>
+    <span class="jx-hotspot__txt"><b>看看照片墙</b><em>这一路的味道</em></span>
+    <span class="jx-hotspot__tail" aria-hidden="true"></span>
+  </button>
+
+  <div class="jx-backdrop" id="jxBackdrop"></div>
+
+  <!-- 01 抽屉 -->
+  <section class="jx-panel jx-sheet" id="panelDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert>
+    <button class="jx-panel__close" type="button" data-close aria-label="关上面板">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <header class="jx-sheet__head">
+      <p class="jx-sheet__eyebrow">STEP 01 · 备料</p>
+      <h2 id="drawerTitle">灶边的抽屉</h2>
+      <p>拉开最上面这一格。面、芝麻酱和六样配料都收在里面，先一样一样装进竹篮。</p>
+    </header>
+    <ul class="jx-ingredients" id="jxIngredients">
+      <li class="jx-ing" data-ing="noodle"><span class="jx-ing__ico jx-ing__ico--noodle" aria-hidden="true"></span><b>碱水面</b><em>一把，掸得干爽</em></li>
+      <li class="jx-ing" data-ing="sesame"><span class="jx-ing__ico jx-ing__ico--sesame" aria-hidden="true"></span><b>芝麻酱</b><em>热干面的灵魂</em></li>
+      <li class="jx-ing" data-ing="radish"><span class="jx-ing__ico jx-ing__ico--radish" aria-hidden="true"></span><b>萝卜丁</b><em>脆口，解腻</em></li>
+      <li class="jx-ing" data-ing="scallion"><span class="jx-ing__ico jx-ing__ico--scallion" aria-hidden="true"></span><b>葱花</b><em>一把青翠</em></li>
+      <li class="jx-ing" data-ing="chili"><span class="jx-ing__ico jx-ing__ico--chili" aria-hidden="true"></span><b>辣油</b><em>红亮的一勺</em></li>
+      <li class="jx-ing" data-ing="vinegar"><span class="jx-ing__ico jx-ing__ico--vinegar" aria-hidden="true"></span><b>香醋</b><em>一点点酸</em></li>
+      <li class="jx-ing" data-ing="peanut"><span class="jx-ing__ico jx-ing__ico--peanut" aria-hidden="true"></span><b>花生碎</b><em>越嚼越香</em></li>
+    </ul>
+    <footer class="jx-sheet__foot">
+      <span class="jx-sheet__count" id="jxIngCount">竹篮还空着</span>
+      <button class="jx-btn" id="jxCollect" type="button">
+        全部装进竹篮
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </button>
+    </footer>
+  </section>
+
+  <!-- 02 拌面 -->
+  <section class="jx-panel jx-craft" id="panelCraft" role="dialog" aria-modal="true" aria-labelledby="craftTitle" aria-hidden="true" inert>
+    <button class="jx-panel__close" type="button" data-close aria-label="关上面板">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="jx-craft__grid">
+      <div class="jx-craft__left">
+        <p class="jx-sheet__eyebrow">STEP 02 · 下锅</p>
+        <h2 id="craftTitle">热干面 · 拌面体验</h2>
+        <p class="jx-craft__lede">面在滚水里烫过，捞进碗里。挑几样喜欢的调料，至少加一样就能拌；按住碗慢慢画圈，让味道裹住每一根面。</p>
+
+        <div class="jx-bowl" id="jxBowlWrap">
+          <svg class="jx-bowl__art" viewBox="0 0 620 620" aria-label="一碗等待加入调料的热干面">
+            <defs>
+              <radialGradient id="jxBowlGrad" cx="38%" cy="30%" r="80%">
+                <stop offset="0" stop-color="#f8f1e3"/><stop offset=".65" stop-color="#e4d8c1"/><stop offset="1" stop-color="#c8b99e"/>
+              </radialGradient>
+              <radialGradient id="jxBrothGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#3b2a1d"/><stop offset="1" stop-color="#1f140e"/>
+              </radialGradient>
+              <radialGradient id="jxSauceGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#b07436" stop-opacity=".94"/><stop offset=".7" stop-color="#8b4f22" stop-opacity=".76"/><stop offset="1" stop-color="#6d3c17" stop-opacity=".24"/>
+              </radialGradient>
+              <linearGradient id="jxTableGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c5a4"/><stop offset="1" stop-color="#c0a781"/></linearGradient>
+              <filter id="jxBowlShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+              <filter id="jxSteamBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+            </defs>
+            <ellipse cx="310" cy="502" rx="250" ry="46" fill="#5d422a" opacity=".22" filter="url(#jxBowlShadow)"/>
+            <ellipse cx="310" cy="478" rx="246" ry="40" fill="url(#jxTableGrad)" opacity=".72"/>
+            <ellipse cx="310" cy="352" rx="238" ry="130" fill="#a89070" opacity=".28"/>
+            <path d="M86 334 Q92 432 160 478 Q232 526 310 526 Q388 526 460 478 Q528 432 534 334 Z" fill="url(#jxBowlGrad)"/>
+            <ellipse cx="310" cy="336" rx="224" ry="122" fill="url(#jxBowlGrad)"/>
+            <ellipse cx="310" cy="336" rx="196" ry="102" fill="url(#jxBrothGrad)"/>
+            <ellipse cx="310" cy="336" rx="196" ry="102" fill="none" stroke="#fbf6ea" stroke-width="7" opacity=".55"/>
+            <g class="jx-noodles" id="jxNoodleGroup">
+              <g stroke="#e9c98f" stroke-width="7" fill="none" stroke-linecap="round">
+                <path d="M206 330 C240 286 290 372 328 318 C354 282 396 330 414 306"/>
+                <path d="M194 356 C238 318 276 396 316 344 C350 300 382 360 422 334"/>
+                <path d="M198 382 C244 348 280 414 324 368 C358 330 390 392 420 366"/>
+                <path d="M218 306 C258 270 288 340 330 300 C362 272 390 312 410 290"/>
+                <path d="M226 402 C262 370 294 430 334 390 C366 358 392 404 412 388"/>
+                <path d="M252 292 C282 330 310 284 344 326 C370 358 390 334 404 348"/>
+                <path d="M236 374 C270 342 302 394 340 352 C370 320 394 362 414 346"/>
+              </g>
+              <g class="jx-noodle-dots" fill="#f3dfb6" opacity=".65">
+                <circle cx="250" cy="330" r="3"/><circle cx="300" cy="310" r="2.5"/><circle cx="360" cy="330" r="3"/>
+                <circle cx="270" cy="386" r="2.5"/><circle cx="330" cy="374" r="3"/><circle cx="386" cy="360" r="2.5"/>
+              </g>
+            </g>
+            <g class="jx-sauce-layer" id="jxSauceLayer" opacity="0">
+              <ellipse cx="300" cy="340" rx="132" ry="62" fill="url(#jxSauceGrad)" filter="url(#jxSteamBlur)"/>
+              <ellipse cx="350" cy="312" rx="80" ry="34" fill="#a4652e" opacity=".5" filter="url(#jxSteamBlur)"/>
+            </g>
+            <g class="jx-toppings" id="jxToppingLayer">
+              <g class="jx-top" data-top="sesame" opacity="0">
+                <ellipse cx="300" cy="324" rx="70" ry="30" fill="#a56d35" opacity=".55" filter="url(#jxSteamBlur)"/>
+              </g>
+              <g class="jx-top" data-top="radish" opacity="0">
+                <rect x="230" y="330" width="13" height="10" rx="2" fill="#d98b64"/><rect x="252" y="348" width="11" height="9" rx="2" fill="#d98b64"/>
+                <rect x="352" y="318" width="12" height="9" rx="2" fill="#d98b64"/><rect x="330" y="360" width="10" height="8" rx="2" fill="#d98b64"/>
+                <rect x="386" y="342" width="10" height="8" rx="2" fill="#d98b64"/>
+              </g>
+              <g class="jx-top" data-top="scallion" opacity="0">
+                <circle cx="268" cy="306" r="4" fill="#6f8b4f"/><circle cx="292" cy="298" r="3.5" fill="#6f8b4f"/>
+                <circle cx="322" cy="306" r="4" fill="#7f9a5c"/><circle cx="346" cy="298" r="3" fill="#6f8b4f"/>
+                <circle cx="370" cy="312" r="4" fill="#7f9a5c"/><circle cx="304" cy="370" r="3.5" fill="#6f8b4f"/>
+                <circle cx="336" cy="378" r="3" fill="#7f9a5c"/><circle cx="258" cy="362" r="3" fill="#6f8b4f"/>
+              </g>
+              <g class="jx-top" data-top="chili" opacity="0">
+                <ellipse cx="360" cy="340" rx="46" ry="26" fill="#c24a2f" opacity=".55" filter="url(#jxSteamBlur)"/>
+                <path d="M330 338 C344 320 370 330 382 344" stroke="#e05a38" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </g>
+              <g class="jx-top" data-top="vinegar" opacity="0">
+                <path d="M250 348 C286 336 312 354 348 342" stroke="#5d3f27" stroke-width="9" fill="none" stroke-linecap="round" opacity=".55" filter="url(#jxSteamBlur)"/>
+              </g>
+              <g class="jx-top" data-top="peanut" opacity="0">
+                <ellipse cx="276" cy="342" rx="6" ry="4" fill="#c99a5f" transform="rotate(-18 276 342)"/>
+                <ellipse cx="306" cy="352" rx="6" ry="4" fill="#b98a50" transform="rotate(24 306 352)"/>
+                <ellipse cx="342" cy="332" rx="5" ry="3.5" fill="#c99a5f" transform="rotate(-30 342 332)"/>
+                <ellipse cx="374" cy="354" rx="5" ry="3.5" fill="#b98a50" transform="rotate(10 374 354)"/>
+              </g>
+            </g>
+            <g class="jx-chopsticks" aria-hidden="true">
+              <path d="M448 236 L548 132" stroke="#5a3f28" stroke-width="6" stroke-linecap="round"/>
+              <path d="M462 252 L558 152" stroke="#6b4b30" stroke-width="6" stroke-linecap="round"/>
+            </g>
+            <g class="jx-bowl-steam" id="jxBowlSteam" opacity="0" filter="url(#jxSteamBlur)">
+              <ellipse cx="260" cy="250" rx="26" ry="16" fill="#f5eee2"/>
+              <ellipse cx="310" cy="220" rx="30" ry="18" fill="#f5eee2"/>
+              <ellipse cx="362" cy="248" rx="24" ry="14" fill="#f5eee2"/>
+              <ellipse cx="292" cy="186" rx="20" ry="12" fill="#f5eee2"/>
+            </g>
+          </svg>
+
+          <div class="jx-stir-meter" id="jxStirMeter" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><circle class="jx-meter-bg" cx="40" cy="40" r="33"/><circle class="jx-meter-fill" id="jxMeterFill" cx="40" cy="40" r="33"/></svg>
+            <span id="jxMeterLabel">0<em>%</em></span>
+          </div>
+          <p class="jx-bowl__hint" id="jxBowlHint" aria-live="polite">点右边的调料，挑你喜欢的；至少加一样就能拌</p>
+          <div class="jx-bowl__drag" id="jxDragHint" aria-hidden="true"><span></span>按住碗，慢慢画圈</div>
+        </div>
+      </div>
+
+      <div class="jx-craft__right">
+        <p class="jx-craft__label">调料 · 挑你喜欢的 <span id="jxCondCount">0 / 6</span></p>
+        <div class="jx-condiments" id="jxConds"></div>
+        <div class="jx-craft__actions">
+          <button class="jx-btn" type="button" id="jxStir" disabled>
+            <span>开始拌面</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </button>
+          <button class="jx-textbtn" type="button" id="jxAutoStir" disabled>自动拌匀</button>
+          <button class="jx-textbtn" type="button" id="jxResetBowl">重新开始</button>
+        </div>
+        <p class="jx-craft__fine">文化展示中的简化模拟 · 非标准食谱</p>
+
+        <div class="jx-complete" id="jxCraftComplete" aria-hidden="true">
+          <p class="jx-complete__kicker">拌好了</p>
+          <h3>一碗热干面的清晨</h3>
+          <p id="jxDoneNote">挑的调料都裹进面里了。端着它，去照片墙前把这碗面放下来。</p>
+          <button class="jx-btn" type="button" id="jxBowlDone">
+            把这碗面端到照片墙
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 照片墙 -->
+  <section class="jx-panel jx-gallery" id="panelGallery" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" aria-hidden="true" inert>
+    <header class="jx-gallery__head">
+      <div class="jx-gallery__title">
+        <p class="jx-sheet__eyebrow">STEP 03 · 照片墙</p>
+        <h2 id="galleryTitle">这一路，尝过的味道</h2>
+      </div>
+      <div class="jx-gallery__ctrl">
+        <button class="jx-round" type="button" id="jxGalPrev" aria-label="上一张照片">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="jx-gallery__count" id="jxGalCount" aria-live="polite">1 / 38</span>
+        <button class="jx-round" type="button" id="jxGalNext" aria-label="下一张照片">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <button class="jx-gallery__close" type="button" data-close>回到厨房</button>
+      </div>
+    </header>
+    <ul class="jx-track" id="jxTrack" aria-label="照片墙相册"></ul>
+    <footer class="jx-gallery__foot">
+      <a href="index.html?from=luwei">回到长街 · 继续往前
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+    </footer>
+  </section>
+
+  <div class="jx-toast" id="jxToast" role="status" aria-live="polite"></div>
+
+  <div class="jx-fallback" id="jxFfallback" hidden>
+    <div>
+      <p class="jx-sheet__eyebrow">3D 厨房暂时没亮起来</p>
+      <h2>也可以直接走完这一章</h2>
+      <p>这个浏览器没有启动 3D 场景。你仍然可以备料、拌面、看照片墙。</p>
+      <div class="jx-fallback__actions">
+        <button class="jx-btn" type="button" data-fallback="drawer">去备料</button>
+        <button class="jx-textbtn" type="button" data-fallback="stove">去拌面</button>
+        <button class="jx-textbtn" type="button" data-fallback="wall">看照片墙</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/three-diorama.min.js"></script>
+  <script src="js/jiangxin-photos.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/jiangxin-room.js"></script>
+  <script src="js/jiangxin.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>

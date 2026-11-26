@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0e0b" />
+  <title>一方水土 · 湖北 江西 山东 | 人间有味</title>
+  <meta name="description" content="一方水土，养一方味。从一张中国地形图出发，走进湖北、江西、山东的三省九味。" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/shuitu.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/ambient-music.css" />
+</head>
+<body class="shuitu-page">
+
+  <header class="site-head site-head--street" id="siteHead">
+    <a class="head-back" href="index.html?from=mianguan" aria-label="回到长街">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span>回到长街</span>
+    </a>
+    <a class="brand" href="index.html" aria-label="人间有味 首页">
+      <span class="brand-text">
+        <span class="brand-name">人间有味</span>
+        <span class="brand-sub">TASTES OF THE EVERYDAY</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="板块导航">
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html" class="is-active" aria-current="page">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="打开导航">
+      <i></i><i></i>
+    </button>
+  </header>
+
+  <nav class="menu-panel" id="menuPanel" aria-label="手机导航">
+    <img class="menu-ambient menu-ambient--top" src="assets/images/scenes/buns.jpg" alt="" aria-hidden="true" />
+    <img class="menu-ambient menu-ambient--bottom" src="assets/images/dishes/outang.jpg" alt="" aria-hidden="true" />
+    <span class="menu-veil" aria-hidden="true"></span>
+    <div class="menu-panel__inner">
+      <a class="menu-back" href="index.html?from=mianguan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        回到长街
+      </a>
+      <div class="menu-list">
+      <a class="menu-link" href="yanhuo.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/buns.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">人间烟火</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link is-active" href="shuitu.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/banfen.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">水土</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="shijie.html">
+        <span class="menu-thumb"><img src="assets/images/scenes/market.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">时节</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiangxin.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/reganmian.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">匠心</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="menu-link" href="jiyi.html">
+        <span class="menu-thumb"><img src="assets/images/dishes/outang.jpg" alt="" loading="lazy" /></span>
+        <span class="menu-name">记忆</span>
+        <svg class="menu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      </div>
+      <span class="menu-seal" aria-hidden="true">味</span>
+    </div>
+  </nav>
+
+  <main class="shuitu-app" id="shuituApp" data-view="map">
+
+    <!-- 一、水土地图 -->
+    <section class="map-scene" id="mapScene" aria-labelledby="mapTitle">
+      <div class="map-stage" id="mapStage">
+        <img class="map-art" src="assets/shuitu/china-map.jpg" alt="中国三维地形图，湖北、江西、山东三省以金色高亮" width="1672" height="941" fetchpriority="high" />
+        <div class="map-scrim" aria-hidden="true"></div>
+        <div class="map-markers" id="mapMarkers"></div>
+      </div>
+
+      <div class="map-copy">
+        <p class="map-eyebrow">
+          <span>第二章 · 一方水土</span>
+          <i></i>
+          <span>THREE PROVINCES · NINE DISHES</span>
+        </p>
+        <h1 class="map-title" id="mapTitle"><span>一方水土，</span><em>养一方味</em></h1>
+        <p class="map-lead">长江、赣江与黄河，各自把三餐写进一方水土。<br />点开一处，便走进那里的早市与灶台。</p>
+      </div>
+
+      <p class="map-side" aria-hidden="true">水 · 土 · 人 · 味</p>
+    </section>
+
+    <!-- 二、省份 3D 食物环 -->
+    <section class="province-scene" id="provinceScene" aria-labelledby="provinceName" aria-hidden="true">
+      <div class="province-bg" aria-hidden="true"></div>
+
+      <div class="province-bar">
+        <button class="province-back" id="provinceBack" type="button" aria-label="回到水土图">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg>
+          <span>回到水土图</span>
+        </button>
+        <p class="province-caption">
+          <span class="province-kicker" id="provinceKicker">HUBEI · 江湖</span>
+          <strong class="province-name" id="provinceName">湖北</strong>
+        </p>
+        <div class="province-switch" id="provinceSwitch" role="tablist" aria-label="切换省份"></div>
+      </div>
+
+      <div class="orbit-stage" id="orbitStage" tabindex="0" aria-label="三道菜的六张照片环绕展示，可左右拖动或按方向键旋转">
+        <div class="orbit-core" aria-hidden="true">
+          <span id="orbitMark">鄂</span>
+          <em id="orbitCoreLabel">江湖三味</em>
+        </div>
+        <div class="orbit-parallax" id="orbitParallax">
+          <div class="orbit-ring" id="orbitRing"></div>
+        </div>
+      </div>
+
+      <div class="dish-note" id="dishNote" aria-live="polite" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <section class="return-street return-street--night" aria-labelledby="shuituReturnTitle">
+    <span class="return-street__seal" aria-hidden="true">回</span>
+    <p class="return-street__kicker">这一桌水土，尝到这里</p>
+    <h2 id="shuituReturnTitle">回到长街，<em>继续往前</em></h2>
+    <p class="return-street__line">从「三省食铺」门口再往前，晚市菜场刚亮灯，菜叶上还带着水汽。</p>
+    <a class="return-street__btn" href="index.html?from=mianguan">
+      回到长街
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a>
+  </section>
+
+  <footer class="site-footer site-footer--dark">
+    <div class="foot-top">
+      <div class="foot-title">人间有味</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html?from=mianguan">回到长街</a>
+      <a href="yanhuo.html">人间烟火</a>
+      <a href="shuitu.html">水土</a>
+      <a href="shijie.html">时节</a>
+      <a href="jiangxin.html">匠心</a>
+      <a href="jiyi.html">记忆</a>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/shuitu.js"></script>
+  <script src="js/ambient-music.js"></script>
+</body>
+</html>
